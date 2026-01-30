@@ -9,9 +9,8 @@ load_dotenv()
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-
-if not TELEGRAM_TOKEN or not GEMINI_API_KEY:
-    raise ValueError("❌ Token বা API key পাওয়া যায়নি"import asyncio
+if not TELEGRAM_TOKEN or not GOOGLE_API_KEY:
+    raise ValueError("❌ Token বা API key পাওয়া যায়নি")
 import logging
 import os
 from dotenv import load_dotenv
