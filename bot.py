@@ -23,4 +23,12 @@ def ai_reply(message):
         bot.reply_to(message, "একটু সমস্যা হয়েছে, পরে চেষ্টা করো।")
 
 print("🤖 Bot is running...")
-bot.polling()
+import time
+
+while True:
+    try:
+        print("🤖 Bot is attempting to poll...")
+        bot.polling(none_stop=True, interval=0, timeout=20)
+    except Exception as e:
+        print(f"❌ Connection error: {e}. Retrying in 5 seconds...")
+        time.sleep(5)
